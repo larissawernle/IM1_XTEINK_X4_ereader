@@ -5,8 +5,6 @@
     --text-light: #3F5C78;
     --text-dark: #202B36;
     --primary-contrast: #E9C46A;
-
-
 }
 
 * {
@@ -16,13 +14,14 @@
 Body{
     font-family: "HelveticaNeueLT", sans-serif;
     max-width: 100%;
+    color: var(--text-dark);
 }
 
 header {
+    /*Seitennavigation*/
     background-color: var(--color-primary);
     ul{
         padding: 30px 250px;
-
         display:flex;
         flex-direction: row;
         justify-content: space-between;
@@ -38,20 +37,17 @@ header {
             }
         }
     }
-
+    /*Headerbild und Titel von Seite "Home"*/
     section{
         display: grid;
         place-items: center;
         grid-template-columns: 1fr 1fr;
         height: 50%;
         background-color: var(--background-dark);
-
             .picture{
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
-
-
                 img{
                     width: 100%;
                     height: 100%;
@@ -75,68 +71,12 @@ main {
     text-align: center;
     padding: 25px;
 
+    /*Home*/
+    /*Einleitungstext*/
     .introduction{
         padding: 50px;
-
     }
-
-    .grid-about-me{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 15px;
-
-        div{
-            padding: 20px;
-            background-color: pink;
-
-        }
-
-        .div1 {
-            grid-column: span 2 / span 2;
-            background-color: pink;
-
-        }
-
-        .div2 {
-            grid-row: span 2 / span 2;
-            grid-column-start: 3;
-            background-color: pink;
-
-        }
-
-        .div3 {
-            grid-row: span 2 / span 2;
-            grid-column-start: 2;
-            grid-row-start: 2;
-            background-color: pink;
-
-        }
-
-        .div4 {
-            grid-row: span 2 / span 2;
-            grid-column-start: 1;
-            grid-row-start: 2;
-            background-color: pink;
-
-        }
-
-        .div5 {
-            grid-row: span 2 / span 2;
-            grid-column-start: 3;
-            grid-row-start: 3;
-            background-color: pink;
-
-        }
-
-        .div6 {
-            grid-column: span 2 / span 2;
-            grid-row-start: 4;
-            background-color: pink;
-
-        }
-    }
-
+    /*Text auf E-reader (Fakten)*/
     .e-reader{
         height: 600px;
         background-image: url("../img/illus_queer.png");
@@ -148,16 +88,19 @@ main {
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            padding: 100px;
-
+            padding: 100px 600px;
+            line-height: 1.5rem;
+            p{
+                padding-top: 10px;
+            }
         }
-    }
 
-    .products{
-        h2{
-            padding: 25px;
-        }
     }
+    /*Zwischentitel*/
+    .products h2{
+        padding: 25px;
+    }
+    /*Vorstellung der XTEINK Produkte*/
     .list-of-products {
         display: flex;
         flex-direction: row;
@@ -184,6 +127,7 @@ main {
             }
         }
     }
+    /*Akkordeon mit Tipps*/
     .tips{
         width: 100%;
         display: flex;
@@ -197,15 +141,114 @@ main {
             padding: 10px;
             width: 50%;
             margin: 2px;
+            background-color: var(--background-dark);
 
             border-style: solid;
             border-width: 3px;
             border-radius: 3px;
 
+            summary{
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            p{
+                padding-top: 5px;
+                line-height: 1.5rem;
+
+            }
         }
     }
-}
 
+
+    /*About me*/
+    .grid-about-me{
+        padding-top: 20px;
+        margin: 0 300px ;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 300px);
+        gap: 15px;
+        }
+        .div1 {
+            grid-column: span 2 / span 2;
+
+            background-image: url("../img/about_me/01.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            }
+        .div2 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+
+
+            background-image: url("../img/about_me/02.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        .div3 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 2;
+            grid-row-start: 2;
+
+
+            background-image: url("../img/about_me/03.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        .div4 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 2;
+
+            background-image: url("../img/about_me/04.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+
+        }
+        .div5 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            grid-row-start: 3;
+            background-image: url("../img/about_me/05.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        .div6 {
+            grid-column: span 2 / span 2;
+            grid-row-start: 4;
+            background-image: url("../img/about_me/06.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+
+    /*About me Hover effekt*/
+    .div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover, .div6:hover{
+        box-shadow: inset 0 0 0 2000px rgba(84, 134, 135, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        text-align: start;
+    }
+    .div1:hover h3, .div2:hover h3, .div3:hover h3, .div4:hover h3, .div5:hover a, .div6:hover h3  {
+        display: flex;
+    }
+    .grid-about-me h3, .grid-about-me a{
+        display: none;
+        padding: 50px;
+        text-decoration: none;
+        color: var(--text-dark);
+        font-size: 2rem;
+        }
+    }
+
+/*Footer*/
 footer{
     background-color: var(--color-primary);
     display: flex;
@@ -214,19 +257,16 @@ footer{
     padding: 20px 50px;
     gap: 10px;
 
-
-
+    /*Text design, anordnung und ausrichtung*/
     div{
         display: flex;
         flex-direction: column;
-
         a, p {
             color: var(--primary-contrast);
             text-decoration: none;
             line-height: 2rem;
         }
     }
-
     button{
         background-color: var(--primary-contrast);
         color: var(--text-dark);
