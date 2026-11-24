@@ -25,5 +25,54 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <h1 class="contact">Kontaktformular</h1>
+        <form action="">
+            <div class="form-name-surname">
+                <div class="form-name">
+                    <label for="name">Vorname:</label>
+                    <input type="text" name="name" id="name" required placeholder="Erika">
+                </div>
+                <div class="form-surname">
+                    <label for="nachname">Nachname:</label>
+                    <input type="text" name="nachname" id="nachname" required placeholder="Musterfrau">
+                </div>
+            </div>
+            <div class="form-email">
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email" required placeholder="Erika@Musterfrau.com">
+            </div>
+            <div class="form-textfeld">
+                <label for="textfeld">Nachricht</label>
+                <textarea name="textfeld" id="textfeld" cols="30" rows="10" required placeholder="Meine Nachricht"></textarea>
+            </div>
+            <div class="form-agb">
+                <label for="agb">Ich akzeptiere die AGBs</label>
+                <input type="checkbox" name="agb" id="agb" required>
+            </div>
+
+
+
+
+            <input type="submit" value="Nachricht senden">
+
+        </form>
+    </main>
+    <footer>
+        <div>
+            <a href="about-me.html">Über mich</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+        <div>
+            <a href="impressum.html">Impressum</a>
+            <p>©2026 Larissa Wernle</p>
+        </div>
+        <button id="toggle-theme">
+            change Theme
+        </button>
+    </footer>
+    <script src="js/theme-toggle.js"></script>
+
 </body>
 </html>

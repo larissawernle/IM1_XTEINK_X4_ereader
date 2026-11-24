@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "JetBrainsMono Bold";
+    src: url("../fonts/JetBrainsMono-Bold.woff2");
+}
+@font-face {
+    font-family: "JetBrainsMono Italic";
+    src: url("../fonts/JetBrainsMono-Italic.woff2");
+}
+@font-face {
+    font-family: "JetBrainsMono Regular";
+    src: url("../fonts/JetBrainsMono-Regular.woff2");
+}
+@font-face {
+    font-family: "Jockey One";
+    src: url("../fonts/JockeyOne-Regular.woff2");
+}
+
+
 :root {
     --color-primary: #042A2B;
     --background-light: #CAD2C5;
@@ -7,17 +25,31 @@
     --primary-contrast: #E9C46A;
 }
 
+[data-theme="dark"] {
+    --color-primary: #042A2B;
+    --background-light: #548687;
+    --background-dark: #3F5C78;
+    --text-light: #CAD2C5;
+    --text-dark: #202B36;
+    --primary-contrast: #E9C46A;
+}
+
+
 * {
     margin: 0;
     padding: 0;
 }
 Body{
-    font-family: "HelveticaNeueLT", sans-serif;
+    font-family: "JetBrainsMono Regular", sans-serif;
     max-width: 100%;
+
     color: var(--text-dark);
+
+
 }
 
 header {
+
     /*Seitennavigation*/
     background-color: var(--color-primary);
     ul{
@@ -60,7 +92,10 @@ header {
                 justify-content: center;
                 text-align: center;
                 color: var(--text-dark);
-                font-size: 3rem;
+                font-family: "Jockey One", sans-serif;
+                h1{
+                    font-size: 4rem;
+                }
             }
     }
 
@@ -79,7 +114,7 @@ main {
     /*Text auf E-reader (Fakten)*/
     .e-reader{
         height: 600px;
-        background-image: url("../img/illus_queer.png");
+        background-image: url("../img/Illus_queer.png");
         background-repeat: no-repeat;
         background-position: center;
 
@@ -88,7 +123,7 @@ main {
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            padding: 100px 600px;
+            padding: 100px 400px;
             line-height: 1.5rem;
             p{
                 padding-top: 10px;
@@ -161,69 +196,72 @@ main {
 
 
     /*About me*/
+    .title-about-me{
+        font-family: "Jockey One", sans-serif;
+        font-size: 4rem;
+    }
     .grid-about-me{
         padding-top: 20px;
         margin: 0 300px ;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 300px);
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(4, 200px);
         gap: 15px;
         }
         .div1 {
-            grid-column: span 2 / span 2;
-
+            grid-column: 1 / span 2;
             background-image: url("../img/about_me/01.png");
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             background-size: 100%;
             }
         .div2 {
-            grid-row: span 2 / span 2;
+            grid-row: 1 / span 2;
             grid-column-start: 3;
 
 
             background-image: url("../img/about_me/02.png");
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             background-size: 100%;
         }
         .div3 {
-            grid-row: span 2 / span 2;
+            grid-row: 2 / span 2;
             grid-column-start: 2;
             grid-row-start: 2;
 
 
             background-image: url("../img/about_me/03.png");
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             background-size: 100%;
         }
         .div4 {
-            grid-row: span 2 / span 2;
+            grid-row: 2 / span 2;
             grid-column-start: 1;
             grid-row-start: 2;
 
             background-image: url("../img/about_me/04.png");
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             background-size: 100%;
 
         }
         .div5 {
-            grid-row: span 2 / span 2;
+            grid-row: 3 / span 2;
             grid-column-start: 3;
             grid-row-start: 3;
             background-image: url("../img/about_me/05.png");
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             background-size: 100%;
         }
         .div6 {
-            grid-column: span 2 / span 2;
+            grid-column: 1 / span 2;
             grid-row-start: 4;
             background-image: url("../img/about_me/06.png");
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             background-size: 100%;
         }
 
@@ -233,7 +271,6 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        justify-items: center;
         text-align: start;
     }
     .div1:hover h3, .div2:hover h3, .div3:hover h3, .div4:hover h3, .div5:hover a, .div6:hover h3  {
@@ -242,14 +279,90 @@ main {
     .grid-about-me h3, .grid-about-me a{
         display: none;
         padding: 50px;
-        text-decoration: none;
         color: var(--text-dark);
-        font-size: 2rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+
+        }
+
+    /*Kontakt*/
+    .contact{
+        margin-bottom: 30px;
+        font-family: "Jockey One", sans-serif;
+        font-size: 4rem;
+    }
+    form{
+        font-family: JetBrainsMono Bold, sans-serif;
+        font-size: 1.2rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+
+        label{
+            align-self: flex-start;
+        }
+        .form-name-surname{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            input{
+                width: 240px;
+            }
+        }
+        .form-name, .form-surname, .form-email, .form-textfeld{
+            display: flex;
+            flex-direction: column;
+        }
+        .form-agb{
+            display: flex;
+            flex-direction: row;
+
+            input{
+                width: 100px;
+            }
+        }
+
+
+        input, textarea{
+            padding: 5px;
+            margin: 5px;
+            width: 500px;
+            border-radius: 5px;
+            border-style: none;
+            border-width: 3px;
+            background-color: var(--background-dark);
+            color: var(--primary-contrast);
+        }
+
+    }
+    ::placeholder {
+        color: var(--primary-contrast);
+    }
+
+    /*Impressum*/
+    .impressum{
+
+        h2, p {
+            text-align: start;
+            padding:0 20%;
+            line-height: 1.5rem;
+        }
+
+        h2{
+            margin: 10px 0;
         }
     }
+}
+
+
 
 /*Footer*/
 footer{
+
     background-color: var(--color-primary);
     display: flex;
     flex-direction: row;
